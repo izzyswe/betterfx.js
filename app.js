@@ -10,6 +10,7 @@ const doEvent = (event, selected_elm, func) => selected_elm.addEventListener(eve
 const logs = (output) => console.log(output)
 const addTxt = (elm, content) => elm.textContent = content;
 //Note: dot notation (elm.style.color) is for fixed property names, bracket notation (elm.style[prop]) is for dynamic property names.
+// EDIT: switch to objects because why not enchance the experience
 const addCSS = (elm, propVal) => {
     if (elm === null) throw new Error("Missing/wrong element selected for " + selctor + ".\nLocation:");
     return Object.assign(elm.style, propVal);
