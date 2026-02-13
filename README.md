@@ -3,7 +3,8 @@ Think of powerfx but better
 
 # Why I made this
 I don't like how powerapps does things, many things they do, don't make sense
-but one thing that drives me bonker getting more deeper into it, they made css and JS incredibly difficult to implement for no reason
+but one thing that drives me bonker getting more deeper into it, they made css and JS incredibly difficult to implement for no reason.
+and alot of people might not be familar with js
 so i made this! whatever this is.
 
 ## Goal
@@ -13,6 +14,7 @@ What I hope to implement is the following:
 - turn common snippets of code into easy to understand function
 - have little but sufficient amount of ultity functions to help extend the functionality
 - be a small library to not take up too much kb or mb if possible, basically lesser => beeter or something like that
+- have some type of match safety so the very least, you have some type of hand holding guidance when you mistype something
 
 ## Purpose
 Whether it gains traction or not, who knows
