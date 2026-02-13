@@ -22,3 +22,5 @@ If you find yourself familarized in powerfx but don't know how to code in javasc
 my hope is to close that gap via using this library to help extend your use with ease and simplicity.
 
 Also, I am a dumbass so please feel free to contribute and add more functionality or optimize the shit code!
+
+P.S if you add an html and css to test, pls make sure to delete them, i have bad habit of this so i made a gitignore for that reason :D 
