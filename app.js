@@ -12,20 +12,26 @@ const addTxt = (elm, content) => elm.textContent = content;
 const addCSS = (elm, propVal) => {
     if (elm === null) throw new Error("Missing/wrong element selected for " + selctor + ".\nLocation:");
     return Object.assign(elm.style, propVal);   }
-const uploop = (start, end, body) => {
-  if(start > end){  
-    throw new Error(`${start} is greater than ${end}. \nLocation:`) 
-  }else{
-    for(let i = start; i < end; i++){ body(i) }
-  }
-}
-const dwnloop = (start, end, body) => {
-  if(start > end){
-    throw new Error(`${start} is less than ${end}. \nLocation:`)
-  }else{
-    for(let i = start; i < end; i--){
-      body(i)
-    }
+const loop = (start, symbol, end, body) => {
+  switch(symbol){
+    case ">":
+      if(start < end) throw new Error(`${start} is less than ${end}. \nLocation:`);
+        for(let i = start; i > end; i++){ body(i) };
+      break;
+    case ">=":
+      if(start < end) throw new Error(`${start} is less than ${end}. \nLocation:`);
+        for(let i = start; i >= end; i++){ body(i) };
+      break;
+    case "<":
+      if(start > end) throw new Error(`${start} is greater than ${end}. \nLocation:`);
+        for(let i = start; i > end; i++){ body(i) };
+      break;
+    case "<=":
+      if(start > end) throw new Error(`${start} is greater than ${end}. \nLocation:`); 
+        for(let i = start; i <= end; i++){ body(i); }
+      break;
+    default:
+      logs("please enter in symbol");
   }
 }
 const html = (tagName, body) => {
@@ -38,7 +44,6 @@ const html = (tagName, body) => {
   };
   customElements.define(tagName, elmClass);
 };
-
 //SAMPLE CODE
 // const h1 = selected("div h1");
 // doEvent("click", h1, () => {
@@ -48,7 +53,7 @@ const html = (tagName, body) => {
 //     backgroundColor: "blue",
 //     fontSize: "16px"
 //   })
-//   uploop(0, 5, (i) => {
+//   loop(0, ">", 5, (i) => {
 //     logs(i)
 //   });
 // });
