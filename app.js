@@ -44,24 +44,15 @@ const html = (tagName, body) => {
   };
   customElements.define(tagName, elmClass);
 };
-//SAMPLE CODE
-// const h1 = selected("div h1");
-// trigger("click", h1, () => {
-//   addTxt(h1, "hello")
-//   addCSS(h1, {
-//     color: "red",
-//     backgroundColor: "blue",
-//     fontSize: "16px"
-//   })
-//   loop(0, ">", 5, (i) => {
-//     logs(i)
-//   });
-// });
 
-// html('my-element', (elm) => {
-//   elm.innerHTML = `
-//     <h1>Hello World</h1>
-//     <p>This is rendered in the DOM.</p>
-//     <p>and it is working as expected</p>
-//   `;
-// });
+export { 
+  selected, 
+  selectedAll, 
+  trigger, 
+  logs, 
+  addTxt, 
+  addCSS, 
+  loop, 
+  html 
+};
+
