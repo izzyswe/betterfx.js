@@ -3,7 +3,7 @@ Think of powerfx but better
 
 ## Goal
 I want to make a library with simplicity but resuable code having a react like composability into a single file given there is a restriction in using one file
-What I hope to implement
+What I hope to implement is the following:
 - Include native web components for html DOM resuability
 - turn common snippets of code into easy to understand function
 - have little but sufficient amount of ultity functions to help extend the functionality
