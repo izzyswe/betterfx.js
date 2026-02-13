@@ -1,6 +1,11 @@
 # betterfx.js
 Think of powerfx but better
 
+# Why I made this
+I don't like how powerapps does things, many things they do, don't make sense
+but one thing that drives me bonker getting more deeper into it, they made css and JS incredibly difficult to implement for no reason
+so i made this! whatever this is.
+
 ## Goal
 I want to make a library with simplicity but resuable code having a react like composability into a single file given there is a restriction in using one file
 What I hope to implement is the following:
@@ -9,7 +14,7 @@ What I hope to implement is the following:
 - have little but sufficient amount of ultity functions to help extend the functionality
 - be a small library to not take up too much kb or mb if possible, basically lesser => beeter or something like that
 
-## purpose
+## Purpose
 Whether it gains traction or not, who knows
 
 sometimes you are restricted to using only one file per web resources.
