@@ -1,47 +1,50 @@
-const selected = (selector, context = document) => {
-  if(document.querySelector(selector) === null){
-    throw new Error("Missing or Incorrect Element selected for " + selector + ".\nLocation:")
-  }else{
-    return context.querySelector(selector);
-  }
+const selected = (selctor, contxt = document) => {
+  const elm = contxt.querySelector(selctor);
+  if (elm === null) throw new Error("Missing/wrong element selected for " + selctor + ".\nLocation:"); return elm;
 }
-const selectedAll = (selector, context = document) => {
-  if(document.querySelectorAll(selector) === null){
-    throw new Error("Missing or Incorrect Element selected for " + selector + ".\nLocation:")
-  }else{
-    context.querySelectorAll(selector);
-  }
+const selectedAll = (selctor, contxt = document) => {
+  const elms = contxt.querySelectorAll(selctor);
+  if(elms.length === 0) throw new Error("Missing/wrong Elements selected for " + selctor + ".\nLocation:"); return elms;
 }
+const doEvent = (event, selected_elm, func) => selected_elm.addEventListener(event, func);
+const logs = (output) => console.log(output)
+const addTxt = (elm, content) => elm.textContent = content;
+//Note: dot notation (elm.style.color) is for fixed property names, bracket notation (elm.style[prop]) is for dynamic property names.
+const addCSS = (elm, propVal) => {
+    if (elm === null) throw new Error("Missing/wrong element selected for " + selctor + ".\nLocation:");
+    return Object.assign(elm.style, propVal);
+};
 
-const doEvent = (event, selected_Element, func) => selected_Element.addEventListener(event, func);
-const terminal = (output) => console.log(output)
-const uplp = (starting_point, end_point, body) => {
-  if(starting_point > end_point){
-    throw new Error(`${starting_point} is greater than ${end_point}. \nLocation:`)
+const uploop = (start, end, body) => {
+  if(start > end){
+    throw new Error(`${start} is greater than ${end}. \nLocation:`)
   }else{
-    for(let i = starting_point; i < end_point; i++){
+    for(let i = start; i < end; i++){
       body(i)
     }
   }
 }
-const downlp = (starting_point, end_point, body) => {
-  if(starting_point > end_point){
-    throw new Error(`${starting_point} is less than ${end_point}. \nLocation:`)
+const dwnloop = (start, end, body) => {
+  if(start > end){
+    throw new Error(`${start} is less than ${end}. \nLocation:`)
   }else{
-    for(let i = starting_point; i < end_point; i--){
+    for(let i = start; i < end; i--){
       body(i)
     }
   }
 }
 
 
-
-terminal("hello")
-
-const h1 = selected("div h1");
-doEvent("click", h1, () => {
-  h1.textContent = "Hello";
-  uplp(0, 5, (i) => {
-    terminal(i)
-  });
-});
+//SAMPLE CODE
+// const h1 = selected("div h1");
+// doEvent("click", h1, () => {
+//   addTxt(h1, "hello")
+//   addCSS(h1, {
+//     color: "red",
+//     backgroundColor: "blue",
+//     fontSize: "16px"
+//   })
+//   uploop(0, 5, (i) => {
+//     logs(i)
+//   });
+// });
