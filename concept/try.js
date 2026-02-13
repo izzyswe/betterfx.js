@@ -1,4 +1,4 @@
-import * as dom from "./app.js"
+import * as dom from "../app.js"
 
 // SAMPLE CODE
 dom.html('my-element', (elm) => {
