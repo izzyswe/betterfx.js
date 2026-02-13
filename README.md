@@ -21,8 +21,10 @@ A library of commonly used lines of code compact into functions with callback fu
 If you find yourself familarized in powerfx but don't know how to code in javascript, and you need to extend the functionality of a powerapp
 my hope is to close that gap via using this library to help extend your use with ease and simplicity.
 
-
-
+<br/>
+<br/>
+<br/>
+<br/>
 
 Also, I am a dumbass so please feel free to contribute and add more functionality or optimize the shit code!
 
