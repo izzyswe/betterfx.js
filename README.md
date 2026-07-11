@@ -1,14 +1,22 @@
 # betterfx.js
-Think of powerfx but better
+Think of powerfx but better, A NON-NPM solution library
 
 # Why I made this
-I don't like how powerapps does things, many things they do, don't make sense
-but one thing that drives me bonker getting more deeper into it, they made css and JS incredibly difficult to implement for no reason.
-and alot of people might not be familar with js
-so i made this! whatever this is.
+Being redtapped and not allowed to have test units, and runtime environments is frustrating,
+spending time to ensure stability, requires time, and maybe you need a quick solution.
+Building from scratch requires you to think differently about how you effectively interact with your applications
+
+If the whole idea of "low code, no code" requires you to just "configure things", why don't we take it a step further?
+
+I don't like how powerapps does things, there are many things they do, and they don't make sense. 
+When you are filled with people might not be familar with js or web development, it may feel like you're alone
+so i made this no-npm no-install no-bolgne solution.
+
+What if you dont need to understand js? What if you just need to understand what it says? What if you configure a set of tools once and reuse it infinitely?
 
 ## Goal
-I want to make a library with simplicity but resuable code having a react like composability into a single file given there is a restriction in using one file
+I want to make a library with the determinism and functional capabilities but also simplicity and resuability and shove it all into a single file to reach and use globally inside your form.
+
 What I hope to implement is the following:
 - Include native web components for html DOM resuability
 - turn common snippets of code into easy to understand function
@@ -18,6 +26,7 @@ What I hope to implement is the following:
 
 ## Purpose
 Whether it gains traction or not, who knows
+
 
 sometimes you are restricted to using only one file per web resources.
 Basically whether you use pcf or web resources in model driven app you may come across using javascript.
@@ -33,6 +42,6 @@ my hope is to close that gap via using this library to help extend your use with
 <br/>
 <br/>
 
-Also, I am a dumbass so please feel free to contribute and add more functionality or optimize the shit code!
+Also, I am dumb so please feel free to contribute and add more functionality or optimize the shit code!
 
-P.S if you add an html and css to test, pls make sure to delete them, i have bad habit of this so i made a gitignore for that reason :D 
+P.S. help if you can! help if you want! improve my code if you feel some of them are not great or add more!
