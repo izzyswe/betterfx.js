@@ -1,27 +1,18 @@
 export function html() {
   return {
-    selected: (selctor, contxt = document) => {
-      const elm = contxt.querySelector(selctor);
-      if (elm === null) throw new Error("Missing/wrong element selected for " + selctor + ".\nLocation:"); return elm;  
-    },
-    selectedAll: (selctor, contxt = document) => {
-      const elms = contxt.querySelectorAll(selctor);
-      if(elms.length === 0) throw new Error("Missing/wrong Elements selected for " + selctor + ".\nLocation:"); return elms;  
-    },
-    trigger: (event, selected_elm, func) => selected_elm.addEventListener(event, func),
-    logs: (output) => console.log(output),
-    addTxt: (elm, content) => elm.textContent = content,
+	const selected: (select, ...selector) => { 
+  		return selector
+    		.map(x => select(x))
+    		.filter(x => x !== null);  
+	},
+	trigger: (event, selected_elm, func) => selected_elm.addEventListener(event, func),
+	text:(elm, content) => elm.textContent = content,
+	domPipe: (selector, appnder = {}) => selector.append(appnder),
     //Note: dot notation (elm.style.color) is for fixed property names, bracket notation (elm.style[prop]) is for dynamic property names.
     // EDIT: switch to objects because why not enchance the experience
     addCSS: (elm, propVal) => {
       if (elm === null) throw new Error("Missing/wrong element selected for " + selctor + ".\nLocation:");
       return Object.assign(elm.style, propVal);   
-    },
-    DOM: {
-      element_(elementName, ...body, { className, id, style, href, onClick, src }){
-        const e = document.createElement(elementName)
-        e.append(...body)
-      }
     }
   }
 }
