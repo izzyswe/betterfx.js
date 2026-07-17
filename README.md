@@ -1,5 +1,5 @@
 # betterfx.js
-Think of powerfx but better, A NON-NPM solution library
+Think of powerfx but better, A lightweight NON-NPM solution library
 
 # Why I made this
 Being redtapped and not allowed to have test units, and runtime environments is frustrating,
@@ -15,13 +15,12 @@ so i made this no-npm no-install no-bolgne solution.
 What if you dont need to understand js? What if you just need to understand what it says? What if you configure a set of tools once and reuse it infinitely?
 
 ## Goal
-I want to make a library with the determinism and functional capabilities but also simplicity and resuability and shove it all into a single file to reach and use globally inside your form.
+I want to make a lightweight library with the deterministic and functional capabilities but also simplicity and resuability and shove it all into a single file to reach and use globally inside your form.
 
 What I hope to implement is the following:
-- Include native web components for html DOM resuability
 - turn common snippets of code into easy to understand function
 - have little but sufficient amount of ultity functions to help extend the functionality
-- be a small library to not take up too much kb or mb if possible, basically lesser => beeter or something like that
+- be a small library to not take up too much kb or mb if possible, basically lesser -> better 
 - have some type of match safety so the very least, you have some type of hand holding guidance when you mistype something
 
 ## Purpose
@@ -42,6 +41,6 @@ my hope is to close that gap via using this library to help extend your use with
 <br/>
 <br/>
 
-Also, I am dumb so please feel free to contribute and add more functionality or optimize the shit code!
+Also, please feel free to contribute and add more functionality or optimize the code!
 
 P.S. help if you can! help if you want! improve my code if you feel some of them are not great or add more!
